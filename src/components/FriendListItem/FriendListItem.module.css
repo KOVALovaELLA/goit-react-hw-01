@@ -1,0 +1,9 @@
+.pItemOnline {
+  color: rgb(54, 153, 4);
+}
+.pItemOffline {
+  color: rgb(209, 32, 32);
+}
+.pItemName {
+  font-weight: bold;
+}

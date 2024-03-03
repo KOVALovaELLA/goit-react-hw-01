@@ -1,0 +1,127 @@
+/* p,
+ul,
+div {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  /
+}
+.container > div {
+  border: 1px solid #808080;
+  padding: 10px;
+}
+.part1Cont {
+  
+}
+.avatar {
+  border-radius: 50%;
+  width: 140px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.name {
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+.TagLocation {
+  color: rgb(128, 128, 128);
+}
+.part2Cont {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  
+}
+.part2Cont > li {
+  border: 1px solid #808080;
+
+  
+}
+.part2li {
+  display: flex;
+  flex-direction: column;
+  
+}
+ */
+
+/* Profile.module.css */
+
+/* Обнуление отступов и маржинов для некоторых элементов */
+p,
+ul,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  padding-top: 20px;
+  border-radius: 5px;
+  /*  overflow: hidden; */ /* Скрытие "лишних" рамок, выходящих за пределы контейнера */
+  margin-bottom: 30px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid black;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.part1Cont {
+  grid-row: 1 / 2;
+  text-align: center;
+  padding-bottom: 10px;
+  position: relative; /* Добавлено позиционирование для потенциального использования z-index */
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.TagLocation {
+  color: #888;
+  margin: 0;
+}
+
+.part2Cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Добавлено позиционирование для потенциального использования z-index */
+}
+
+.part2li {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 0px;
+  z-index: 1;
+  background-color: #b2afaf;
+}
+
+.part2li span:first-child {
+  font-weight: bold;
+  display: block;
+}
